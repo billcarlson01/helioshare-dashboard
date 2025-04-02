@@ -1,12 +1,12 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Dashboard userId="1" />} />
-      </Routes>
+      <Switch>
+        <Route exact path="/" component={() => <Dashboard userId="1" />} />
+      </Switch>
     </Router>
   );
 }
