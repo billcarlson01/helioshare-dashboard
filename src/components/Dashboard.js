@@ -17,6 +17,8 @@ const Dashboard = ({ userId }) => {
   useEffect(() => {
     //axios.get(`http://localhost:3000/dashboard/${userId}`)
     //axios.get(`https://helioshare-env.eba-myem6xn6.us-east-2.elasticbeanstalk.com/dashboard/${userId}`)
+    //axios.get(`http://helioshare-env.eba-myem6xn6.us-east-2.elasticbeanstalk.com/dashboard/${userId}`)
+    //axios.get(`https://d2x3y4z5.cloudfront.net/dashboard/${userId}`)
     axios.get(`http://helioshare-env.eba-myem6xn6.us-east-2.elasticbeanstalk.com/dashboard/${userId}`)
       .then(res => setStats(res.data))
       .catch(err => console.error(err));
